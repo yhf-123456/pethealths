@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.pet.dao.UserMapper">
+    <!-- 根据账号判断用户是否存在 -->
+    <select id="getUserNumByAccountNo" resultType="integer">
+        select count(1) from `user` where account_no = #{account_no}
+    </select>
+
+    <!-- 根据用户名和密码查询用户 -->
+    <select id="getUserByAccountNoAndPwd" resultType="User">
+        SELECT id,account_no,password,phone,regist_time,user_icon,status from `user`
+         where account_no = #{account_no} and password = #{password}
+    </select>
+</mapper>
