@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: Root123456...
+  mvc:
+    static-path-pattern: /static/**
+  http:
+    encoding:
+      force: true
+server:
+  port: 80
+  servlet:
+    context-path: /lt
+mybatis:
+  typeAliasesPackage: cn.yhf.entity        #实体类别名
+  mapperLocations: classpath:mapper/*.xml  #映射文件路径，放置在resources下
+  #config-location: classpath:mybatis/mybatis-config.xml  #配置mybatis配置文件
+  #configuration:
+  # auto-mapping-behavior: full     #自动映射级别
