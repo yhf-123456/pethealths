@@ -37,4 +37,7 @@ public class PetController {
         return "gallery";
     }
 
+    @RequestMapping("/login")
+    public String login(){ return "login";}
+
 }

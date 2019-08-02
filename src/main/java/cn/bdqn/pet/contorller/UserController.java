@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 用户控制器类
  */
-@Controller("/user")
+@Controller(value = "/user")
 public class UserController {
 
     @Autowired
@@ -24,18 +24,19 @@ public class UserController {
     /*
     异步判断账号是否存在
      */
-    @RequestMapping("/exists")
-    public Object account_idIsExists(String account_id){
+    @RequestMapping(value = "/exists",method = RequestMethod.GET)
+    public Object account_idIsExists(String account_no){
         Result result = new Result();
         int num = 0;
         try {
-            num = userService.findUserNumByAccountNo(account_id);
+            num = userService.findUserNumByAccountNo(account_no);
             if (num > 0){
                 result.setCode(200);
             }else{
                 result.setCode(404);
                 result.setMsg("对不起，您输入的账户不存在，请检查是否输入错误！");
             }
+            System.out.println(JSON.toJSONString(result));
         }catch (Exception e){
             result.setCode(500);
             result.setMsgError();

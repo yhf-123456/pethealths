@@ -39,6 +39,6 @@ public class Result implements Serializable {
     }
 
     public void setMsgError(){
-        this.setMsg("您的网络有问题，请稍后重试！");
+        this.setMsg("服务器累坏了，请稍后重试！");
     }
 }
