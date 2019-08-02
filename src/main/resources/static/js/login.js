@@ -1,15 +1,16 @@
 $(function () {
-
     //鼠标离开账号框异步校验账户是否存在
-    $("#accountNo").focus(function () {
+    $("#accountNo").blur(function () {
+        alert("bb");
         //获取用户账号
         var accountNo = $(this).val();
 
         if(accountNo != null && accountNo != ''){
+            alert("异步校验");
             $.ajax({
-               url : "user/exists",
+               url : "exists",
                 dataType : JSON,
-                type : get,
+                type : "get",
                 data : {accountNo : accountNo},
                 success : function (data) {
                     if(data.cod == 404){

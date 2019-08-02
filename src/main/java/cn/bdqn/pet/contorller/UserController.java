@@ -25,6 +25,7 @@ public class UserController {
     异步判断账号是否存在
      */
     @RequestMapping(value = "/exists",method = RequestMethod.GET)
+    @ResponseBody
     public Object account_idIsExists(String account_no){
         Result result = new Result();
         int num = 0;
