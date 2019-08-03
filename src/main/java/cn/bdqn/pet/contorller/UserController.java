@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
  * 用户控制器类
  */
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -41,7 +42,6 @@ public class UserController {
             result.setCode(3);
             result.setMsgError();
         }
-        System.out.println(JSON.toJSONString(result));
         return JSON.toJSONString(result);
     }
 
@@ -50,22 +50,24 @@ public class UserController {
      */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
-    public Object login(String account_id, String password, HttpSession session){
+    public Object login(String account_no, String password, HttpSession session){
         Result result = new Result();
         User user = null;
         try {
-            user = userService.findUserByAccountNoAndPwd(account_id,password);
+            user = userService.findUserByAccountNoAndPwd(account_no,password);
             if (user != null){
-                result.setCode(200);
+                result.setCode(1);
                 session.setAttribute("user",user);
             }else {
-                result.setCode(404);
+                result.setCode(2);
                 result.setMsg("密码错误，请重新输入！");
             }
         }catch (Exception e){
-            result.setCode(500);
+            result.setCode(3);
             result.setMsgError();
         }
+        System.out.println(JSON.toJSONString(result));
         return JSON.toJSONString(result);
     }
+
 }

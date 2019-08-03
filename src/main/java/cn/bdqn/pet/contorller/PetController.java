@@ -40,4 +40,7 @@ public class PetController {
     @RequestMapping("/login")
     public String login(){ return "login";}
 
+    @RequestMapping("/talk")
+    public String toTalk(){return "talk";}
+
 }
