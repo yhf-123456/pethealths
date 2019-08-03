@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 用户控制器类
  */
-@Controller(value = "/user")
+@Controller
 public class UserController {
 
     @Autowired
@@ -32,16 +32,16 @@ public class UserController {
         try {
             num = userService.findUserNumByAccountNo(account_no);
             if (num > 0){
-                result.setCode(200);
+                result.setCode(1);
             }else{
-                result.setCode(404);
+                result.setCode(2);
                 result.setMsg("对不起，您输入的账户不存在，请检查是否输入错误！");
             }
-            System.out.println(JSON.toJSONString(result));
         }catch (Exception e){
-            result.setCode(500);
+            result.setCode(3);
             result.setMsgError();
         }
+        System.out.println(JSON.toJSONString(result));
         return JSON.toJSONString(result);
     }
 

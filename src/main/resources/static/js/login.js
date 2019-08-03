@@ -1,21 +1,20 @@
 $(function () {
     //鼠标离开账号框异步校验账户是否存在
     $("#accountNo").blur(function () {
-        alert("bb");
         //获取用户账号
         var accountNo = $(this).val();
 
+        //如果输入信息部位空进行异步校验
         if(accountNo != null && accountNo != ''){
-            alert("异步校验");
             $.ajax({
                url : "exists",
-                dataType : JSON,
+                dataType : "json",
                 type : "get",
-                data : {accountNo : accountNo},
+                data : {account_no : accountNo},
                 success : function (data) {
-                    if(data.cod == 404){
+                    if(data.code == 2){
                         alert(data.msg);
-                    }else if(data.code == 500){
+                    }else if(data.code == 3){
                         alert(data.msg);
                     }
                 },
