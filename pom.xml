@@ -63,6 +63,12 @@
 
         <!--Mybatis 代码自动生成-->
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.2</version>
@@ -85,7 +91,7 @@
             <optional>true</optional>
         </dependency>
 
-    </dependencies>
+        </dependencies>
 
     <build>
         <plugins>

@@ -6,8 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@MapperScan("cn.bdqn.pet.mapper")
+
 @SpringBootApplication
+@MapperScan("cn.bdqn.pet.mapper")
 public class PethealthsApplication {
 
     public static void main(String[] args) {
