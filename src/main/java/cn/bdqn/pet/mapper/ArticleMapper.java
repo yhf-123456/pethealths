@@ -2,7 +2,6 @@ package cn.bdqn.pet.mapper;
 
 import cn.bdqn.pet.entity.Article;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.springframework.stereotype.Repository;
 
 /**
  * <p>
