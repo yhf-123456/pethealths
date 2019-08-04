@@ -5,11 +5,11 @@
     <title>宠物健康网</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="images/icons/favicon.png" type="image/png" rel="icon">
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet">
-    <link href="css/themify-icons.css" type="text/css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet"> 
+    <link th:href="@{static/images/icons/favicon.png}" type="image/png" rel="icon">
+    <link th:href="@{static/css/bootstrap.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{static/css/bootstrap-responsive.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{static/css/themify-icons.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{static/css/style.css}" type="text/css" rel="stylesheet">
 </head>
 
 <body class="main">
@@ -23,7 +23,7 @@
                         <header>
                             <!-- Logo -->
                             <div class="vfp-logo-wrapper">
-                                <a href="home" class="logo"><img src="images/logo.png" alt="" class="img-responsive"></a>
+                                <a href="home" class="logo"><img th:src="@{static/images/logo.png}" alt="" class="img-responsive"></a>
                             </div>
                         </header>
                         <!-- Navigation Menu -->
@@ -39,7 +39,7 @@
                                                 <li><a href="zxwz">在线问诊<span class="over1"></span></a></li>
                                                 <li><a href="czlc">成长历程<span class="over1"></span></a></li>
                                                 <li><a href="jbk">疾病库<span class="over1"></span></a></li>
-                                               <!-- <li><a href="jkzx">健康常识<span class="over1"></span></a></li>-->
+                                                <li><a href="jkzx">个人中心<span class="over1"></span></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -56,25 +56,25 @@
                             <a class="vfp-next1" href="index.html#"></a>
                             <ul class="vfp-caroufredsel-slider1">
                                 <li>
-                                    <div class="vfp-caroufredsel-slide1"> <img src="images/slider/slide02.jpg" alt="" class="img-responsive">
+                                    <div class="vfp-caroufredsel-slide1"> <img th:src="@{static/images/slider/slide02.jpg}" alt="" class="img-responsive">
                                         <div class="txt1">我们的兽医实践</div>
                                         <div class="txt2">让我们保持你的宠物健康!</div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="vfp-caroufredsel-slide1"> <img src="images/slider/slide01.jpg" alt="" class="img-responsive">
+                                    <div class="vfp-caroufredsel-slide1"> <img th:src="@{static/images/slider/slide01.jpg}" alt="" class="img-responsive">
                                         <div class="txt1">家庭宠物安乐死</div>
                                         <div class="txt2">让我们保持你的宠物健康!</div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="vfp-caroufredsel-slide1"> <img src="images/slider/slide03.jpg" alt="" class="img-responsive">
+                                    <div class="vfp-caroufredsel-slide1"> <img th:src="@{static/images/slider/slide03.jpg}" alt="" class="img-responsive">
                                         <div class="txt1">切除卵巢,中性的手术</div>
                                         <div class="txt2">让我们保持你的宠物健康!</div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="vfp-caroufredsel-slide1"> <img src="images/slider/slide04.jpg" alt="" class="img-responsive">
+                                    <div class="vfp-caroufredsel-slide1"> <img th:src="@{static/images/slider/slide04.jpg}" alt="" class="img-responsive">
                                         <div class="txt1">高级宠物护理</div>
                                         <div class="txt2">让我们保持你的宠物健康!</div>
                                     </div>
@@ -104,7 +104,7 @@
                                         <li>
                                             <div class="vfp-carousel-services">
                                                 <div class="vfp-caroufredsel-slide2">
-                                                    <a href="sousuo"> <img src="images/services/services04.jpg" alt="" class="img-responsive">
+                                                    <a href="sousuo"> <img th:src="@{static/images/services/services04.jpg}" alt="" class="img-responsive">
                                                         <div class="txt">
                                                             <div class="txt1">宠物健康</div>
                                                             <div class="txt2">全面高级宠物护理。莫丽斯·沃鲁帕特·苏塞维特·阿文特是一名弗吉亚人。</div>
@@ -116,7 +116,7 @@
                                         <li>
                                             <div class="vfp-carousel-services">
                                                 <div class="vfp-caroufredsel-slide2">
-                                                    <a href="zxwz"> <img src="images/services/services02.jpg" alt="" class="img-responsive">
+                                                    <a href="zxwz"> <img th:src="@{static/images/services/services02.jpg}" alt="" class="img-responsive">
                                                         <div class="txt">
                                                             <div class="txt1">在线问诊</div>
                                                             <div class="txt2">全面高级宠物护理。莫丽斯·沃鲁帕特·苏塞维特·阿文特是一名弗吉亚人。</div>
@@ -128,7 +128,7 @@
                                         <li>
                                             <div class="vfp-carousel-services">
                                                 <div class="vfp-caroufredsel-slide2">
-                                                    <a href="czlc"> <img src="images/services/services01.jpg" alt="" class="img-responsive">
+                                                    <a href="czlc"> <img th:src="@{static/images/services/services01.jpg}" alt="" class="img-responsive">
                                                         <div class="txt">
                                                             <div class="txt1">成长历程</div>
                                                             <div class="txt2">全面高级宠物护理。莫丽斯·沃鲁帕特·苏塞维特·阿文特是一名弗吉亚人</div>
@@ -140,7 +140,7 @@
                                         <li>
                                             <div class="vfp-carousel-services">
                                                 <div class="vfp-caroufredsel-slide2">
-                                                    <a href="jbk"> <img src="images/services/services03.jpg" alt="" class="img-responsive">
+                                                    <a href="jbk"> <img th:src="@{static/images/services/services03.jpg}" alt="" class="img-responsive">
                                                         <div class="txt">
                                                             <div class="txt1">疾病库</div>
                                                             <div class="txt2">全面高级宠物护理。莫丽斯·沃鲁帕特·苏塞维特·阿文特是一名弗吉亚人</div>
@@ -193,26 +193,26 @@
     </div>
     
     <!-- Footer -->
-    <footer> <img src="images/icons/paw.png" alt="" class="img-responsive">
+    <footer> <img th:src="@{static/images/icons/paw.png}" alt="" class="img-responsive">
         <h1>宠物健康网</h1>
         <!--<p class="subtitle">宠物医院</p>-->
         <div class="vfp-social-wrapper">
             <ul class="social clearfix">
-                <li><a href="index.html#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="index.html#"><i class="ti-instagram"></i></a></li>
-                <li><a href="index.html#"><i class="ti-youtube"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-youtube"></i></a></li>
             </ul>
         </div>
         <div class="copyright">Copyright © 2019, by DuruThemes</div>
     </footer>
     
     <!-- JS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/superfish.js"></script>
-    <script src="js/jquery.caroufredsel.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script th:src="@{static/js/jquery.js}"></script>
+    <script th:src="@{static/js/jquery.easing.1.3.js}"></script>
+    <script th:src="@{static/js/superfish.js}"></script>
+    <script th:src="@{static/js/jquery.caroufredsel.js}"></script>
+    <script th:src="@{static/js/jquery.touchSwipe.min.js}"></script>
+    <script th:src="@{static/js/bootstrap.js}"></script>
 
     <script type="text/javascript" th:inline="javascript">
 

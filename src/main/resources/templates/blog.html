@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
-<html lang="zxx">
+<html  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <title>宠物健康网</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="images/icons/favicon.png" type="image/png" rel="icon">
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet">
-    <link href="css/themify-icons.css" type="text/css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet"> 
+    <link th:href="@{static/images/icons/favicon.png}" type="image/png" rel="icon">
+    <link th:href="@{static/css/bootstrap.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{static/css/bootstrap-responsive.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{static/css/themify-icons.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{static/css/style.css}" type="text/css" rel="stylesheet"> 
 </head>
 
 <body class="subpage">
@@ -21,7 +21,7 @@
                         <header>
                             <!-- Logo -->
                             <div class="vfp-logo-wrapper">
-                                <a href="home" class="logo"><img src="images/logo.png" alt="" class="img-responsive"></a>
+                                <a href="home" class="logo"><img th:src="@{static/images/logo.png}" alt="" class="img-responsive"></a>
                             </div>
                         </header>
                         <!-- Navigation Menu -->
@@ -59,7 +59,7 @@
                         <ul class="thumbnails vfp-thumbnails2">
                             <li>
                                 <div class="thumbnail clearfix">
-                                    <figure><img src="images/blog/blog01.jpg" alt="" class="img-responsive"></figure>
+                                    <figure><img th:src="@{static/images/blog/blog01.jpg}" alt="" class="img-responsive"></figure>
                                     <div class="caption">
                                         <div class="vfp-author-date"> <span class="ti-time"></span> 20.11.2019 <span class="ti-user"></span> Duru布朗 </div>
                                         <h4>给狗狗刷牙</h4>
@@ -70,7 +70,7 @@
                             </li>
                             <li>
                                 <div class="thumbnail clearfix">
-                                    <figure><img src="images/blog/blog02.jpg" alt="" class="img-responsive"></figure>
+                                    <figure><img th:src="@{static/images/blog/blog02.jpg}" alt="" class="img-responsive"></figure>
                                     <div class="caption">
                                         <div class="vfp-author-date"> <span class="ti-time"></span> 18.11.2019 <span class="ti-user"></span> Duru布朗 </div>
                                         <h4>发现切除卵巢,中性服务</h4>
@@ -81,7 +81,7 @@
                         <ul class="thumbnails vfp-thumbnails2">
                             <li>
                                 <div class="thumbnail clearfix">
-                                    <figure><img src="images/blog/blog03.jpg" alt="" class="img-responsive"></figure>
+                                    <figure><img th:src="@{static/images/blog/blog03.jpg}" alt="" class="img-responsive"></figure>
                                     <div class="caption">
                                         <div class="vfp-author-date"> <span class="ti-time"></span> 17.11.2019 <span class="ti-user"></span> Duru Brown </div>
                                         <h4>宠物动物医院兽医</h4>
@@ -90,7 +90,7 @@
                             </li>
                             <li>
                                 <div class="thumbnail clearfix">
-                                    <figure><img src="images/blog/blog04.jpg" alt="" class="img-responsive"></figure>
+                                    <figure><img th:src="@{static/images/blog/blog04.jpg}" alt="" class="img-responsive"></figure>
                                     <div class="caption">
                                         <div class="vfp-author-date"> <span class="ti-time"></span> 12.10.2019 <span class="ti-user"></span> Duru Brown </div>
                                         <h4>看看我们的宠物是如何行动的</h4>
@@ -101,7 +101,7 @@
                         <ul class="thumbnails vfp-thumbnails2">
                             <li>
                                 <div class="thumbnail clearfix">
-                                    <figure><img src="images/blog/blog05.jpg" alt="" class="img-responsive"></figure>
+                                    <figure><img th:src="@{static/images/blog/blog05.jpg}" alt="" class="img-responsive"></figure>
                                     <div class="caption">
                                         <div class="vfp-author-date"> <span class="ti-time"></span> 7.10.2019 <span class="ti-user"></span> Duru Brown </div>
                                         <h4>我们会照顾你最好的朋友</h4>
@@ -110,7 +110,7 @@
                             </li>
                             <li>
                                 <div class="thumbnail clearfix">
-                                    <figure><img src="images/blog/blog06.jpg" alt="" class="img-responsive"></figure>
+                                    <figure><img th:src="@{static/images/blog/blog06.jpg}" alt="" class="img-responsive"></figure>
                                     <div class="caption">
                                         <div class="vfp-author-date"> <span class="ti-time"></span> 5.10.2019 <span class="ti-user"></span> Duru Brown </div>
                                         <h4>小猫在探索世界</h4>
@@ -125,24 +125,24 @@
     </div>
     
     <!-- Footer -->
-    <footer> <img src="images/icons/paw.png" alt="" class="img-responsive">
+    <footer> <img th:src="@{static/images/icons/paw.png}" alt="" class="img-responsive">
         <h1>宠物健康网</h1>
         <!--<p class="subtitle">宠物医院</p>-->
         <div class="vfp-social-wrapper">
             <ul class="social clearfix">
-                <li><a href="index.html#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="index.html#"><i class="ti-instagram"></i></a></li>
-                <li><a href="index.html#"><i class="ti-youtube"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-youtube"></i></a></li>
             </ul>
         </div>
         <div class="copyright">Copyright © 2019, by DuruThemes</div>
     </footer>
     
     <!-- JS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/superfish.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script th:src="@{static/js/jquery.js}"></script>
+    <script th:src="@{static/js/jquery.easing.1.3.js}"></script>
+    <script th:src="@{static/js/superfish.js}"></script>
+    <script th:src="@{static/js/bootstrap.js}"></script>
     <script>
         
         var buttons = document.querySelectorAll(".vfp-button1");
