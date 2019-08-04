@@ -3,6 +3,7 @@ package cn.bdqn.pet.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,42 +20,58 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class User implements Serializable {
+public class Presentation implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 病情介绍 id
+     */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 用户账号
+     * 疾病标题外键
      */
-    private String accountNo;
+    @TableField("diseaseTitleId")
+    private Integer diseaseTitleId;
 
     /**
-     * 用户密码
+     * 内容
      */
-    private String password;
+    private String content;
 
     /**
-     * 用户手机号
+     * 图片
      */
-    private String phone;
+    private String img;
 
     /**
-     * 注册时间
+     * 发布人
      */
-    private LocalDateTime registTime;
+    @TableField("userId")
+    private Integer userId;
 
     /**
-     * 用户头像
+     * 发布时间
      */
-    private String userIcon;
+    private LocalDateTime pubtime;
 
     /**
-     * 用户状态 1未禁用 0禁用
+     * 标记
      */
-    private String status;
+    private Integer mark;
+
+    /**
+     * 评论权重外键
+     */
+    @TableField("commentWiId")
+    private Integer commentWiId;
+
+    /**
+     * 点赞
+     */
+    private Integer like;
 
 
 }
